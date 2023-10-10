@@ -20,12 +20,22 @@ if(NOT CMAKE_BUILD_TYPE)
 endif()
 
 # dependecies
-include(cmake/get_cpm.cmake)
-CPMAddPackage(
-  NAME P
-  VERSION 0.1.0
-  GITHUB_REPOSITORY lucasguesserts/cmake-install-tutorial-P
-)
+if(R_USE_CPM)
+    include(cmake/get_cpm.cmake)
+    CPMAddPackage(
+    NAME P
+    VERSION 0.1.0
+    GITHUB_REPOSITORY lucasguesserts/cmake-install-tutorial-P
+    )
+else()
+    set(FIND_LIBRARY_USE_LIB64_PATHS TRUE)
+    find_package(P
+        0.0.0
+        REQUIRED
+        CONFIG
+        PATHS "$ENV{HOME}/foo/"
+    )
+endif()
 
 # setup executable
 

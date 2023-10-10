@@ -2,5 +2,5 @@
 
 build: ## build the project
 	rm -rf build/
-	cmake -Bbuild
+	cmake -DR_USE_CPM=ON -Bbuild
 	cmake --build build --config Debug
