@@ -7,6 +7,7 @@ public:
     ClassR() = default;
     ~ClassR() = default;
     virtual void print() final {
+        P::ClassP::print();
         std::cout << "ClassR" << std::endl;
     }
 };
