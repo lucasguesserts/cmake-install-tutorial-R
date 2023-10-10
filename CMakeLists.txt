@@ -24,7 +24,7 @@ if(R_USE_CPM)
     include(cmake/get_cpm.cmake)
     CPMAddPackage(
     NAME P
-    VERSION 0.1.0
+    VERSION 0.2.0
     GITHUB_REPOSITORY lucasguesserts/cmake-install-tutorial-P
     )
 else()
