@@ -24,13 +24,13 @@ if(R_USE_CPM)
     include(cmake/get_cpm.cmake)
     CPMAddPackage(
     NAME P
-    VERSION 0.2.0
+    VERSION 0.3.0
     GITHUB_REPOSITORY lucasguesserts/cmake-install-tutorial-P
     )
 else()
     set(FIND_LIBRARY_USE_LIB64_PATHS TRUE)
     find_package(P
-        0.0.0
+        0.3.0
         REQUIRED
         CONFIG
         PATHS "$ENV{HOME}/foo/"
